@@ -8,9 +8,9 @@ import com.rps.utils.InputReader;
 
 public class AppControls {
 
-    Player player;
-    ComputerAl computerAl;
-    Round round;
+    private Player player;
+    private ComputerAl computerAl;
+    private Round round;
     private InputReader inputReader;
 
     public AppControls(){
