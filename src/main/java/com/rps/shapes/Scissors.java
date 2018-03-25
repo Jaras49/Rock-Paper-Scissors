@@ -17,7 +17,7 @@ public class Scissors implements Shape {
         if (shape instanceof Rock || shape instanceof Spock) {
             return false;
         }
-        if (shape instanceof Paper || shape instanceof Lizard) {
+        else if (shape instanceof Paper || shape instanceof Lizard) {
             return true;
         }
         return false;

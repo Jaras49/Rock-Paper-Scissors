@@ -17,7 +17,7 @@ public class Spock implements Shape {
         if (shape instanceof Scissors || shape instanceof Rock) {
             return true;
         }
-        if (shape instanceof Lizard || shape instanceof Paper){
+        else if (shape instanceof Lizard || shape instanceof Paper){
             return false;
         }
         return false;

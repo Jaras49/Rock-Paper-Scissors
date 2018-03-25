@@ -17,7 +17,7 @@ public class Paper implements Shape {
         if (shape instanceof Scissors || shape instanceof Lizard) {
             return false;
         }
-        if (shape instanceof Rock || shape instanceof Spock) {
+        else if (shape instanceof Rock || shape instanceof Spock) {
             return true;
         }
         return false;
