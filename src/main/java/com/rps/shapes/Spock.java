@@ -2,23 +2,23 @@ package com.rps.shapes;
 
 import java.util.Objects;
 
-public class Paper implements Shape {
+public class Spock implements Shape {
 
     private final String shapeName;
 
-    public Paper()  {
-        shapeName = "Paper";
+    public Spock() {
+        shapeName = "Spock";
         System.out.println(shapeName + "!!!!!!");
     }
 
     @Override
     public boolean beats(Shape shape) {
 
-        if (shape instanceof Scissors || shape instanceof Lizard) {
-            return false;
-        }
-        if (shape instanceof Rock || shape instanceof Spock) {
+        if (shape instanceof Scissors || shape instanceof Rock) {
             return true;
+        }
+        if (shape instanceof Lizard || shape instanceof Paper){
+            return false;
         }
         return false;
     }
@@ -27,7 +27,7 @@ public class Paper implements Shape {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Paper paper = (Paper) o;
-        return Objects.equals(shapeName, paper.shapeName);
+        Spock spock = (Spock) o;
+        return Objects.equals(shapeName, spock.shapeName);
     }
 }

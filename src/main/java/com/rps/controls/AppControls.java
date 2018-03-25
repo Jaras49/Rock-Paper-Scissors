@@ -3,9 +3,7 @@ package com.rps.controls;
 import com.rps.Round;
 import com.rps.players.ComputerAl;
 import com.rps.players.Player;
-import com.rps.shapes.Paper;
-import com.rps.shapes.Rock;
-import com.rps.shapes.Scissors;
+import com.rps.shapes.*;
 import com.rps.utils.InputReader;
 
 public class AppControls {
@@ -39,6 +37,12 @@ public class AppControls {
                     break;
                 case SCISSORS:
                     round.play(new Scissors());
+                    break;
+                case SPOCK:
+                    round.play(new Spock());
+                    break;
+                case LIZARD:
+                    round.play(new Lizard());
                     break;
                 case RESTART:
                     if (confirm(MainOptions.RESTART.name()))

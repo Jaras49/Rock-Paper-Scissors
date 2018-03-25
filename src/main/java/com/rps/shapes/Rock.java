@@ -14,10 +14,10 @@ public class Rock implements Shape {
     @Override
     public boolean beats(Shape shape) {
 
-        if (shape instanceof Paper) {
+        if (shape instanceof Paper || shape instanceof Spock) {
             return false;
         }
-        if (shape instanceof Scissors) {
+        if (shape instanceof Scissors || shape instanceof Lizard) {
             return true;
         }
         return false;

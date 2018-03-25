@@ -2,10 +2,12 @@ package com.rps.controls;
 
 public enum MainOptions {
     EXIT(0, "Exit program"),
-    ROCK(1, "Play pock"),
+    ROCK(1, "Play rock"),
     PAPER(2, "Play paper"),
     SCISSORS(3, "Play scissors"),
-    RESTART (4, "Restart game");
+    SPOCK(4, "Play spock"),
+    LIZARD(5, "Play Lizard"),
+    RESTART (6, "Restart game");
 
     private int value;
     private String description;

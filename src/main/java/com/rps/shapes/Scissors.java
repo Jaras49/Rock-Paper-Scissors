@@ -14,10 +14,10 @@ public class Scissors implements Shape {
     @Override
     public boolean beats(Shape shape) {
 
-        if (shape instanceof Rock) {
+        if (shape instanceof Rock || shape instanceof Spock) {
             return false;
         }
-        if (shape instanceof Paper) {
+        if (shape instanceof Paper || shape instanceof Lizard) {
             return true;
         }
         return false;

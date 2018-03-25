@@ -22,7 +22,6 @@ public class Round {
     public void play(Shape shape) {
 
         roundNumber++;
-        check();
         Shape alShape = computerAl.getComputerMove();
 
         if (shape.equals(alShape)){
@@ -31,8 +30,10 @@ public class Round {
         else if (shape.beats(alShape)){
             playerWins();
         }
-        else
+        else {
             computerWins();
+        }
+        check();
     }
 
     private void draw(){
