@@ -23,33 +23,38 @@ public class AppControls {
         printOptions();
         while(!stop){
             System.out.println("Time for " + player.getName() + " move");
-            switch (MainOptions.createOption(inputReader.getInt())){
-                case EXIT:
-                    if(confirm(MainOptions.EXIT.name())){
-                        stop = true;
-                    }
-                    break;
-                case ROCK:
-                    round.play(new Rock());
-                   break;
-                case PAPER:
-                    round.play(new Paper());
-                    break;
-                case SCISSORS:
-                    round.play(new Scissors());
-                    break;
-                case SPOCK:
-                    round.play(new Spock());
-                    break;
-                case LIZARD:
-                    round.play(new Lizard());
-                    break;
-                case RESTART:
-                    if (confirm(MainOptions.RESTART.name()))
-                        run();
-                    break;
+            try {
+                switch (MainOptions.createOption(inputReader.getInt())) {
+                    case EXIT:
+                        if (confirm(MainOptions.EXIT.name())) {
+                            stop = true;
+                        }
+                        break;
+                    case ROCK:
+                        round.play(new Rock());
+                        break;
+                    case PAPER:
+                        round.play(new Paper());
+                        break;
+                    case SCISSORS:
+                        round.play(new Scissors());
+                        break;
+                    case SPOCK:
+                        round.play(new Spock());
+                        break;
+                    case LIZARD:
+                        round.play(new Lizard());
+                        break;
+                    case RESTART:
+                        if (confirm(MainOptions.RESTART.name()))
+                            run();
+                        break;
+                }
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.err.println("Wrong input, try again");
+            } finally {
+                printOptions();
             }
-            printOptions();
         }
     }
 
